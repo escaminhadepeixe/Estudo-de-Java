@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class Calculadora
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner =new Scanner(System.in);
+        
+        String tipoOperacao;
+        double numero1=0;
+        double numero2=0;
+        double resultadoOperacao=0;
+        int i=1;
+        System.out.println("Escolha uma operação");
+        tipoOperacao= scanner.nextLine();
+        System.out.println("Digite o primeiro numero");
+        numero1= scanner.nextDouble();
+        System.out.println("Digite o segundo numero");
+        numero2= scanner.nextDouble();
+        
+        
+      while (i==1) 
+        {
+            if(tipoOperacao.equals("Soma") || tipoOperacao.equals("Divisao") || tipoOperacao.equals("Multiplicacao") || tipoOperacao.equals("Subtracao"))
+            {
+                break;
+            }
+            else
+            {
+                System.out.println("Operação não reconhecida");   
+                System.out.println("Escolha uma operação");
+                tipoOperacao= scanner.nextLine();
+            }
+        }
+        
+        if(tipoOperacao.equals("Soma"))
+        {
+            resultadoOperacao=numero1+numero2;
+        }
+        else
+        {
+            if(tipoOperacao.equals("Multiplicacao"))
+            {
+                resultadoOperacao=numero1*numero2;
+            }
+            else
+            {
+                if(tipoOperacao.equals("Divisao"))
+                {
+                    resultadoOperacao=numero1/numero2;
+                }
+                else
+                {
+                    if(tipoOperacao.equals("Subtracao"))
+                    {
+                        resultadoOperacao=numero1-numero2;    
+                    }
+                    else
+                    {
+                        System.out.println("Operação não reconhecida");   
+                    }
+                }
+            }
+        }
+        System.out.println("O resultado é:"+resultadoOperacao);
+        
+        scanner.close();
+        
+    }
+    
+}
