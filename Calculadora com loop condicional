@@ -13,13 +13,7 @@ public class Calculadora
         int i=1;
         System.out.println("Escolha uma operação");
         tipoOperacao= scanner.nextLine();
-        System.out.println("Digite o primeiro numero");
-        numero1= scanner.nextDouble();
-        System.out.println("Digite o segundo numero");
-        numero2= scanner.nextDouble();
-        
-        
-      while (i==1) 
+         while (i==1) 
         {
             if(tipoOperacao.equals("Soma") || tipoOperacao.equals("Divisao") || tipoOperacao.equals("Multiplicacao") || tipoOperacao.equals("Subtracao"))
             {
@@ -32,6 +26,10 @@ public class Calculadora
                 tipoOperacao= scanner.nextLine();
             }
         }
+        System.out.println("Digite o primeiro numero");
+        numero1= scanner.nextDouble();
+        System.out.println("Digite o segundo numero");
+        numero2= scanner.nextDouble();
         
         if(tipoOperacao.equals("Soma"))
         {
